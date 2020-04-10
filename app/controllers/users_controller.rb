@@ -1,4 +1,4 @@
-class UsersController < ApplicationController
+class UserController < ApplicationController
 
 	def create
 		user = User.create(user_params)
@@ -8,11 +8,6 @@ class UsersController < ApplicationController
 		else
 			render json: { errors: user.errors.full_messages }
 		end
-	end
-
-	def index
-		users = User.all
-		render :index
 	end
 
 	# def show
